@@ -1,8 +1,10 @@
 package com.qrcode.qr;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
@@ -38,6 +40,12 @@ public class MainApp extends Application {
         resultTextArea.setEditable(false);
         resultTextArea.setPromptText("Результат считывания QR-кода появится здесь...");
 
+        // Область для отображения QR-кода
+        ImageView qrImageView = new ImageView();
+        qrImageView.setFitWidth(200);
+        qrImageView.setFitHeight(200);
+        qrImageView.setPreserveRatio(true);
+
         // Обработчик для генерации QR-кода
         generateQRButton.setOnAction(event -> {
             String text = textField.getText().trim(); // Получаем текст из поля ввода
@@ -46,6 +54,15 @@ public class MainApp extends Application {
                     logger.info("Пользователь ввёл текст для генерации QR-кода: {}", text);
                     String filePath = "qrcode.png"; // Путь для сохранения QR-кода
                     QRCodeGenerator.generateQRCode(text, filePath);
+
+                    // Отображение QR-кода в приложении
+                    File qrFile = new File(filePath);
+                    if (qrFile.exists()) {
+                        Image qrImage = new Image(qrFile.toURI().toString());
+                        qrImageView.setImage(qrImage);
+                        logger.info("QR-код успешно отображён в приложении.");
+                    }
+
                     logger.info("QR-код успешно сохранён в файл: {}", filePath);
                     showAlert(Alert.AlertType.INFORMATION, "Успех", "QR-код сохранен как " + filePath);
                 } catch (Exception e) {
@@ -83,10 +100,10 @@ public class MainApp extends Application {
         // Контейнер для элементов
         VBox root = new VBox(10);
         root.setPadding(new Insets(20));
-        root.getChildren().addAll(textField, generateQRButton, readQRButton, resultTextArea);
+        root.getChildren().addAll(textField, generateQRButton, qrImageView, readQRButton, resultTextArea);
 
         // Создаем сцену
-        Scene scene = new Scene(root, 400, 300);
+        Scene scene = new Scene(root, 360, 640);
         primaryStage.setTitle("QR Code App");
         primaryStage.setScene(scene);
         primaryStage.show();

@@ -118,3 +118,23 @@ java.io.IOException: Server returned HTTP response code: 400 for URL: https://ap
 2024-12-25 13:52:39 INFO  com.qrcode.qr.MainApp - Интерфейс приложения успешно загружен
 2024-12-25 13:52:44 INFO  com.qrcode.qr.MainApp - Пользователь выбрал файл для чтения QR-кода: P:\JavaLabs\QR\qrcode.png
 2024-12-25 13:52:45 INFO  com.qrcode.qr.MainApp - QR-код успешно считан: https:\/\/google.com
+2024-12-25 14:11:26 INFO  com.qrcode.qr.MainApp - Приложение запущено
+2024-12-25 14:11:27 INFO  com.qrcode.qr.MainApp - Интерфейс приложения успешно загружен
+2024-12-25 14:11:32 WARN  com.qrcode.qr.MainApp - Попытка генерации QR-кода с пустым текстовым полем
+2024-12-25 14:11:38 INFO  com.qrcode.qr.MainApp - Пользователь ввёл текст для генерации QR-кода: Gafoit
+2024-12-25 14:11:51 INFO  com.qrcode.qr.MainApp - QR-код успешно сохранён в файл: qrcode.png
+2024-12-25 14:14:02 INFO  com.qrcode.qr.MainApp - Приложение запущено
+2024-12-25 14:14:02 INFO  com.qrcode.qr.MainApp - Интерфейс приложения успешно загружен
+2024-12-25 14:14:05 WARN  com.qrcode.qr.MainApp - Попытка генерации QR-кода с пустым текстовым полем
+2024-12-25 14:14:09 INFO  com.qrcode.qr.MainApp - Пользователь ввёл текст для генерации QR-кода: Gafoit
+2024-12-25 14:14:10 INFO  com.qrcode.qr.MainApp - QR-код успешно отображён в приложении.
+2024-12-25 14:14:10 INFO  com.qrcode.qr.MainApp - QR-код успешно сохранён в файл: qrcode.png
+2024-12-25 14:15:27 INFO  com.qrcode.qr.MainApp - Приложение запущено
+2024-12-25 14:15:28 INFO  com.qrcode.qr.MainApp - Интерфейс приложения успешно загружен
+2024-12-25 14:16:38 INFO  com.qrcode.qr.MainApp - Приложение запущено
+2024-12-25 14:16:39 INFO  com.qrcode.qr.MainApp - Интерфейс приложения успешно загружен
+2024-12-25 14:17:03 INFO  com.qrcode.qr.MainApp - Приложение запущено
+2024-12-25 14:17:03 INFO  com.qrcode.qr.MainApp - Интерфейс приложения успешно загружен
+2024-12-25 14:17:34 INFO  com.qrcode.qr.MainApp - Пользователь ввёл текст для генерации QR-кода: https://google.com
+2024-12-25 14:17:46 INFO  com.qrcode.qr.MainApp - QR-код успешно отображён в приложении.
+2024-12-25 14:17:46 INFO  com.qrcode.qr.MainApp - QR-код успешно сохранён в файл: qrcode.png
