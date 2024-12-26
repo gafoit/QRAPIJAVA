@@ -52,19 +52,35 @@ public class MainApp extends Application {
             if (!text.isEmpty()) {
                 try {
                     logger.info("Пользователь ввёл текст для генерации QR-кода: {}", text);
-                    String filePath = "qrcode.png"; // Путь для сохранения QR-кода
-                    QRCodeGenerator.generateQRCode(text, filePath);
 
-                    // Отображение QR-кода в приложении
-                    File qrFile = new File(filePath);
-                    if (qrFile.exists()) {
-                        Image qrImage = new Image(qrFile.toURI().toString());
-                        qrImageView.setImage(qrImage);
-                        logger.info("QR-код успешно отображён в приложении.");
+// Используем FileChooser для выбора пути сохранения
+                    FileChooser fileChooser = new FileChooser();
+                    fileChooser.setTitle("Сохранить QR-код");
+                    fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("PNG Image", "*.png"));
+
+// Указываем рекомендуемое имя файла
+                    fileChooser.setInitialFileName("qrcode.png");
+
+// Показываем диалог выбора файла
+                    File saveFile = fileChooser.showSaveDialog(primaryStage);
+
+                    if (saveFile != null) {
+                        String filePath = saveFile.getAbsolutePath();
+                        QRCodeGenerator.generateQRCode(text, filePath); // Генерация QR-кода
+                        logger.info("QR-код успешно сохранён в файл: {}", filePath);
+
+// Отображение QR-кода в приложении
+                        File qrFile = new File(filePath);
+                        if (qrFile.exists()) {
+                            Image qrImage = new Image(qrFile.toURI().toString());
+                            qrImageView.setImage(qrImage);
+                            logger.info("QR-код успешно отображён в приложении.");
+                        }
+
+                        showAlert(Alert.AlertType.INFORMATION, "Успех", "QR-код сохранён как " + filePath);
+                    } else {
+                        logger.info("Сохранение QR-кода было отменено пользователем");
                     }
-
-                    logger.info("QR-код успешно сохранён в файл: {}", filePath);
-                    showAlert(Alert.AlertType.INFORMATION, "Успех", "QR-код сохранен как " + filePath);
                 } catch (Exception e) {
                     logger.error("Ошибка при генерации QR-кода", e);
                     showAlert(Alert.AlertType.ERROR, "Ошибка", "Не удалось сгенерировать QR-код.");
@@ -166,10 +182,11 @@ public class MainApp extends Application {
 
     // Метод для парсинга ответа от API
     private String parseQRResponse(String response) {
+        System.out.println(response);
         if (response.contains("\"data\":\"")) {
             int startIndex = response.indexOf("\"data\":\"") + 8;
             int endIndex = response.indexOf("\"", startIndex);
-            return response.substring(startIndex, endIndex);
+            return response.substring(startIndex, endIndex).replace("\\/", "/");
         }
         logger.warn("Не удалось распознать QR-код. Ответ: {}", response);
         return "Не удалось распознать QR-код.";

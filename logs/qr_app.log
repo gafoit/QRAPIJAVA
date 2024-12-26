@@ -138,3 +138,34 @@ java.io.IOException: Server returned HTTP response code: 400 for URL: https://ap
 2024-12-25 14:17:34 INFO  com.qrcode.qr.MainApp - Пользователь ввёл текст для генерации QR-кода: https://google.com
 2024-12-25 14:17:46 INFO  com.qrcode.qr.MainApp - QR-код успешно отображён в приложении.
 2024-12-25 14:17:46 INFO  com.qrcode.qr.MainApp - QR-код успешно сохранён в файл: qrcode.png
+2024-12-26 15:28:41 INFO  com.qrcode.qr.MainApp - Приложение запущено
+2024-12-26 15:28:42 INFO  com.qrcode.qr.MainApp - Интерфейс приложения успешно загружен
+2024-12-26 15:29:09 INFO  com.qrcode.qr.MainApp - Пользователь ввёл текст для генерации QR-кода: https://kemsu.ru/
+2024-12-26 15:29:10 INFO  com.qrcode.qr.MainApp - QR-код успешно отображён в приложении.
+2024-12-26 15:29:10 INFO  com.qrcode.qr.MainApp - QR-код успешно сохранён в файл: qrcode.png
+2024-12-26 15:29:39 INFO  com.qrcode.qr.MainApp - Пользователь выбрал файл для чтения QR-кода: C:\Users\Anna\IdeaProjects\QRAPIJAVA\qrcode.png
+2024-12-26 15:29:40 INFO  com.qrcode.qr.MainApp - QR-код успешно считан: https:\/\/kemsu.ru\/
+2024-12-26 15:31:13 INFO  com.qrcode.qr.MainApp - Приложение запущено
+2024-12-26 15:31:13 INFO  com.qrcode.qr.MainApp - Интерфейс приложения успешно загружен
+2024-12-26 15:31:34 INFO  com.qrcode.qr.MainApp - Пользователь выбрал файл для чтения QR-кода: C:\Users\Anna\IdeaProjects\QRAPIJAVA\qrcode.png
+2024-12-26 15:31:36 INFO  com.qrcode.qr.MainApp - QR-код успешно считан: https:\/\/kemsu.ru\/
+2024-12-26 15:32:37 INFO  com.qrcode.qr.MainApp - Пользователь ввёл текст для генерации QR-кода: hi\
+2024-12-26 15:32:37 INFO  com.qrcode.qr.MainApp - QR-код успешно отображён в приложении.
+2024-12-26 15:32:37 INFO  com.qrcode.qr.MainApp - QR-код успешно сохранён в файл: qrcode.png
+2024-12-26 15:33:03 INFO  com.qrcode.qr.MainApp - Пользователь выбрал файл для чтения QR-кода: C:\Users\Anna\IdeaProjects\QRAPIJAVA\qrcode.png
+2024-12-26 15:33:04 INFO  com.qrcode.qr.MainApp - QR-код успешно считан: hi\\
+2024-12-26 15:36:58 INFO  com.qrcode.qr.MainApp - Приложение запущено
+2024-12-26 15:36:58 INFO  com.qrcode.qr.MainApp - Интерфейс приложения успешно загружен
+2024-12-26 15:37:11 INFO  com.qrcode.qr.MainApp - Пользователь ввёл текст для генерации QR-кода: kemsu.ru\
+2024-12-26 15:37:12 INFO  com.qrcode.qr.MainApp - QR-код успешно отображён в приложении.
+2024-12-26 15:37:12 INFO  com.qrcode.qr.MainApp - QR-код успешно сохранён в файл: qrcode.png
+2024-12-26 15:37:21 INFO  com.qrcode.qr.MainApp - Пользователь выбрал файл для чтения QR-кода: C:\Users\Anna\IdeaProjects\QRAPIJAVA\qrcode.png
+2024-12-26 15:37:21 INFO  com.qrcode.qr.MainApp - QR-код успешно считан: kemsu.ru\\
+2024-12-26 15:37:45 INFO  com.qrcode.qr.MainApp - Приложение запущено
+2024-12-26 15:37:45 INFO  com.qrcode.qr.MainApp - Интерфейс приложения успешно загружен
+2024-12-26 15:38:07 INFO  com.qrcode.qr.MainApp - Пользователь ввёл текст для генерации QR-кода: https://kemsu.ru/
+2024-12-26 15:38:08 INFO  com.qrcode.qr.MainApp - QR-код успешно отображён в приложении.
+2024-12-26 15:38:08 INFO  com.qrcode.qr.MainApp - QR-код успешно сохранён в файл: qrcode.png
+2024-12-26 15:38:22 INFO  com.qrcode.qr.MainApp - Пользователь выбрал файл для чтения QR-кода: C:\Users\Anna\IdeaProjects\QRAPIJAVA\qrcode.png
+2024-12-26 15:38:23 INFO  com.qrcode.qr.MainApp - QR-код успешно считан: https://kemsu.ru/
+2024-12-26 15:38:41 WARN  com.qrcode.qr.MainApp - Пользователь не выбрал файл для чтения QR-кода
